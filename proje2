@@ -1,0 +1,37 @@
+Merge Sort Aşamaları:
+Bölme Aşamaları:            [16,21,11,8,12,22]
+                           /                  \
+                [16,21,11]                    [8,12,22]
+               /          \                  /         \
+         [16]            [21,11]          [8]        [12,22]
+          |             /      \           |         /      \
+         [16]        [21]     [11]       [8]      [12]    [22]
+
+Birleştirme Aşamaları:      [16]     [11,21]        [8]     [12,22]
+                             |           |            |         |
+                          [11,16,21]                [8,12,22]
+                               \                        /
+                                [8,11,12,16,21,22]
+
+                                
+Big-O Gösterimi:
+Merge Sort'un karmaşıklığı her durum için: O(n log n)
+
+Açıklamalar:
+a) Bölme aşaması:
+
+Dizi sürekli ikiye bölünür
+Her seviyede bölme işlemi log n kez gerçekleşir
+Her eleman tek kalana kadar devam eder
+
+b) Birleştirme aşaması:
+
+En küçük parçalardan başlayarak birleştirilir
+Her seviyede n işlem yapılır
+Sıralı alt diziler birleştirilirken karşılaştırma yapılır
+
+c) Toplam karmaşıklık:
+
+Her seviyede n işlem
+log n seviye olduğu için
+Toplam: O(n log n)
